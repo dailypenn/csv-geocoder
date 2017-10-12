@@ -24,10 +24,12 @@ python geocoder.py [file_name.csv]
 
 The results will be output to a file called `geocoded_[file_name].csv` – the name of your original file with `geocoded_` prepended.
 
+Notes
+-------
+
+This geocoder is used primarily for data at [The Daily Pennsylvanian](https://thedp.com). As such, it uses `Philadelphia` and `PA` as its city and state. If your data is for other cities/states, or has the city and state already included, adjust the code appropriately.
+
 Credits
 -------
 
 Built by Alex Graves at [The Daily Pennsylvanian](https://thedp.com).
-
-License
--------
