@@ -28,6 +28,13 @@ data['lng'] = 0.0
 # use Google's geocoding API to get lat/lng from addresses and update data
 for index, row in data.iterrows():
     address = row['address']
+
+    # if address is unspecified, just put 0/0 for its lat/lng
+    if address != address:
+        data.at[index, 'lat'] = 0.0
+        data.at[index, 'lng'] = 0.0
+        continue
+
     address = address.replace(' ', '+')
     address += '+' + city + '+' + state
     address = quote(address) # encode address for special characters
